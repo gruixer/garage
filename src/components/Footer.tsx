@@ -54,7 +54,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 AutoGarage Pro. Tous droits réservés.
+            © 2025 Carrosserie S.aliberti Tous droits réservés.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy-policy">
