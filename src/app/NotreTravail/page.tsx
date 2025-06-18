@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 
 import { useState } from "react";
 import { Card } from "../../components/ui/card";
@@ -11,14 +12,14 @@ const categories = ["Tous", "Réparations", "Réglage", "Restauration", "Personn
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1632823471565-1ecdf7936988?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    src: "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Réfection du Moteur",
     category: "Réparations",
     description: "Révision complète du moteur sur BMW M4 2018"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    src: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Échappement Performance",
     category: "Réglage",
     description: "Installation d'un système d'échappement en titane sur mesure"
@@ -67,7 +68,7 @@ const galleryImages = [
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    src: "https://images.unsplash.com/photo-1486326658981-ed68abe5868e?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Revival Porsche Vintage",
     category: "Restauration",
     description: "Restauration d'une Porsche 911 de 1973 aux spécifications d'origine"
@@ -81,7 +82,7 @@ const galleryImages = [
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    src: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Réfection de Transmission",
     category: "Réparations",
     description: "Révision complète de transmission manuelle"
@@ -148,7 +149,14 @@ export default function PhotoPage() {
                 onClick={() => setSelectedImage(image)}
               >
                 <div className="aspect-square overflow-hidden relative">
-                  IMAGE ICI
+                  
+                        <Image
+                          src={image.src}
+                          alt={image.description}
+                          fill
+                          className="object-cover"
+                        />
+                      
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                   <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Badge variant="secondary">{image.category}</Badge>
@@ -179,7 +187,12 @@ export default function PhotoPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-           IMAGE ICI
+              <Image
+                          src={selectedImage.src}
+                          alt={selectedImage.description}
+                          fill
+                          className="object-cover"
+                        />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg">
               <div className="flex items-center justify-between mb-2">
                 <h3 className="text-white text-xl font-semibold">{selectedImage.title}</h3>

@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 
 import { Hero } from "../../components/Hero";
 
@@ -15,13 +16,12 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold">
-                Réparation Automobile de Confiance Depuis 2003
+                Services Auto de Confiance Depuis 1994
               </h2>
               <p className="text-muted-foreground text-lg">
-                AutoGarage Pro sert la communauté avec des services automobiles honnêtes 
-                et fiables depuis plus de deux décennies. Nos mécaniciens certifiés ASE 
-                utilisent les derniers équipements de diagnostic et des pièces de qualité 
-                pour garantir que votre véhicule reçoive les meilleurs soins possibles.
+                Sébastiano Aliberti, aujourd&apos;hui patron de la Carrosserie Aliberti, a repris les rênes de l’ancienne Carrosserie Schaer en août 1994, après y avoir travaillé pendant dix ans depuis 1984.
+
+Son parcours débute à la Carrosserie du Relais, suivi d’une expérience à la Carrosserie Nocera à Yverdon, avant de rejoindre la Carrosserie Schaer à Cuarny, où se trouve désormais son propre atelier.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -30,7 +30,7 @@ export default function HomePage() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span>Mécaniciens Certifiés ASE</span>
+                  <span>Mécaniciens Certifiés</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
@@ -59,13 +59,22 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="relative">
-             IMAGE ICI
-              <div className="absolute -bottom-6 -left-6 bg-card border border-border p-6 rounded-xl shadow-lg">
+          
+         <div className="relative aspect-3/2 rounded-md overflow-hidden">
+  <Image
+    src="/index.jpg"
+    width={500}
+    height={500}
+    alt="Picture of the author"
+    className="object-cover w-full h-full"
+  />
+  <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent rounded-md" />
+</div>
+              {/* <div className="absolute -bottom-6 -left-6 bg-card border border-border p-6 rounded-xl shadow-lg">
                 <div className="text-3xl font-bold text-primary">98%</div>
                 <div className="text-sm text-muted-foreground">Satisfaction Client</div>
-              </div>
-            </div>
+              </div> */}
+            
           </div>
         </div>
       </section>

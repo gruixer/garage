@@ -44,10 +44,10 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Informations de Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>123 Main Street</li>
-              <li>Votre Ville, ST 12345</li>
-              <li>(555) 123-CARS</li>
-              <li>info@autogaragepro.com</li>
+              <p>Carrosserie Aliberti</p>
+              <p>Le Grand Nouz</p>
+              <p>1404 Cuarny</p>
+              <li>carro.aliberti@bluewin.ch</li>
             </ul>
           </div>
         </div>

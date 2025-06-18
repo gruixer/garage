@@ -6,15 +6,14 @@ export function Header() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2 cursor-pointer">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold">AG</span>
+            <span className="text-primary-foreground font-bold">CA</span>
           </div>
-          <h1 className="text-xl font-bold">AutoGarage Pro</h1>
+          <h1 className="text-xl font-bold">Carrosserie S.aliberti</h1>
         </div>
 
         <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/Home">Acceuil</Link>
+            <Link href="/Home">Accueil</Link>
               <Link href="/Services">Nos services</Link>
-              <Link href="/Tunning">Tunning</Link>
               <Link href="/NotreTravail">Notre travail</Link>
               <Link href="/Contact">Contact</Link>
         </nav>
