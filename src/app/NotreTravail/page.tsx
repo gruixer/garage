@@ -105,12 +105,12 @@ export default function PhotoPage() {
     : galleryImages.filter(img => img.category === selectedCategory);
 
   return (
-    <main className="pt-20">
+    <main className="">
       {/* Section Hero */}
-      <section className="py-20 bg-background">
+      <section className="pb-20 pt-33 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Notre <span className="text-primary">Travail</span>
+            <span className="text-primary">Notre Travail</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto mb-8">
             Jetez un œil à certains de nos meilleurs travaux automobiles. De l&apos;entretien de routine aux 
